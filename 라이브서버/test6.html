@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <h1>현재 시각 기록 실습</h1>
+    <button onclick="addTime()">현재 시각 기록</button>
+    <ul id="timeList"></ul>
+<div><a href="index.html">홈으로</a></div>
+<script>
+    function addTime() {
+        const now = new Date();
+        const li = document.createElement('li');
+        li.textContent = now.toLocaleTimeString();
+        document.getElementById('timeList').appendChild(li);
+    }
+</script>
+</body>
+</html>
